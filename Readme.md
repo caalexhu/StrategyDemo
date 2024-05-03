@@ -7,7 +7,7 @@
     使用策略模式，将不同的计算逻辑封装到不同的策略类中，然后通过上下文类来选择不同的策略类
 
 ## 3.实现方式：
-    1. 定义Instrument与策略接口
+    1. 定义 InstrumentType 枚举与策略接口
 ```java
 public enum InstrumentType {
     INSTRUMENT_1,
@@ -16,9 +16,9 @@ public enum InstrumentType {
 }
 ```
 ```java
-    public interface CalculateStrategy {
-        void calculate();
-    }
+public interface CalculateStrategy {
+    void calculate();
+}
 ```
     2. 实现不同的策略实现类
 ```java
