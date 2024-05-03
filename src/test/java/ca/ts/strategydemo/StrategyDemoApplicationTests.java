@@ -1,4 +1,4 @@
-package ca.terrasoft.strategydemo;
+package ca.ts.strategydemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

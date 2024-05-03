@@ -1,4 +1,4 @@
-package ca.terrasoft.strategydemo;
+package ca.ts.strategydemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

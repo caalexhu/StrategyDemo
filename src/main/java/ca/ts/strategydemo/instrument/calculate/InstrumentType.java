@@ -1,4 +1,4 @@
-package ca.terrasoft.strategydemo.instrument.calculate;
+package ca.ts.strategydemo.instrument.calculate;
 
 /**
  * @author: Alex Hu
@@ -8,7 +8,5 @@ package ca.terrasoft.strategydemo.instrument.calculate;
 public enum InstrumentType {
     INSTRUMENT_1,
     INSTRUMENT_2,
-    INSTRUMENT_3,
-    INSTRUMENT_4,
     // 其他仪器类型
 }

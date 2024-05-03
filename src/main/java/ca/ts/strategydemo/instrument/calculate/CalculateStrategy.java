@@ -1,4 +1,4 @@
-package ca.terrasoft.strategydemo.instrument.calculate;
+package ca.ts.strategydemo.instrument.calculate;
 
 /**
  * @author: Alex Hu

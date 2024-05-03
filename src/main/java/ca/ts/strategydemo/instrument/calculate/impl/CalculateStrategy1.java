@@ -1,7 +1,7 @@
-package ca.terrasoft.strategydemo.instrument.calculate.impl;
+package ca.ts.strategydemo.instrument.calculate.impl;
 
 
-import ca.terrasoft.strategydemo.instrument.calculate.CalculateStrategy;
+import ca.ts.strategydemo.instrument.calculate.CalculateStrategy;
 
 /**
  * @author: Alex Hu

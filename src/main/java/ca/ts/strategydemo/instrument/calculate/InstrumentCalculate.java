@@ -1,9 +1,7 @@
-package ca.terrasoft.strategydemo.instrument.calculate;
+package ca.ts.strategydemo.instrument.calculate;
 
-import ca.terrasoft.strategydemo.instrument.calculate.impl.CalculateStrategy1;
-import ca.terrasoft.strategydemo.instrument.calculate.impl.CalculateStrategy2;
-import ca.terrasoft.strategydemo.instrument.calculate.impl.CalculateStrategy3;
-import ca.terrasoft.strategydemo.instrument.calculate.impl.CalculateStrategy4;
+import ca.ts.strategydemo.instrument.calculate.impl.CalculateStrategy1;
+import ca.ts.strategydemo.instrument.calculate.impl.CalculateStrategy2;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -24,8 +22,7 @@ public class InstrumentCalculate {
     public InstrumentCalculate() {
         this.strategyMap.put(InstrumentType.INSTRUMENT_1, new CalculateStrategy1());
         this.strategyMap.put(InstrumentType.INSTRUMENT_2, new CalculateStrategy2());
-        this.strategyMap.put(InstrumentType.INSTRUMENT_3, new CalculateStrategy3());
-        this.strategyMap.put(InstrumentType.INSTRUMENT_4, new CalculateStrategy4());
+        // 其他仪器类型
     }
 
     public boolean Calculate(String parameters, InstrumentType instrumentType) {
