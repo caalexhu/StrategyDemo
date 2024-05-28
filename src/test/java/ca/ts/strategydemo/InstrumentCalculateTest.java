@@ -24,7 +24,7 @@ public class InstrumentCalculateTest {
         String parameters = "I‘m a parameter.";
         // 定义仪器类型
         //InstrumentType instrumentType = InstrumentType.INSTRUMENT_1; //直接枚举值
-        InstrumentType instrumentType = InstrumentType.valueOf("INSTRUMENT_1"); //通过枚举值字符串获取枚举值
+        InstrumentType instrumentType = InstrumentType.valueOf("INSTRUMENT_3"); //通过枚举值字符串获取枚举值
         // 调用计算方法
         boolean isOk = instrumentCalculate.Calculate(parameters, instrumentType);
         assertTrue(isOk);

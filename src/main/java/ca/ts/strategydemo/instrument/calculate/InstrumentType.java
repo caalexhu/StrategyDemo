@@ -8,5 +8,6 @@ package ca.ts.strategydemo.instrument.calculate;
 public enum InstrumentType {
     INSTRUMENT_1,
     INSTRUMENT_2,
+    INSTRUMENT_3,
     // 其他仪器类型
 }

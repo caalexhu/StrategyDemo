@@ -7,19 +7,19 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author: Alex Hu
- * @createTime: 2024/05/02 21:54
+ * @createTime: 2024/05/02 21:55
  * @description:
  */
 @Service
-public class CalculateStrategy1 implements CalculateStrategy {
+public class CalculateStrategy3 implements CalculateStrategy {
     @Override
     public boolean support(InstrumentType type) {
-        return (InstrumentType.INSTRUMENT_1).equals(type);
+        return (InstrumentType.INSTRUMENT_3).equals(type);
     }
 
     @Override
     public boolean calculate(String parameters) {
-        System.out.println("CalculateStrategy1 Executed. Parameters: " + parameters + ".");
+        System.out.println("CalculateStrategy3 Executed, Parameters: " + parameters + ".");
         return true;
     }
 }

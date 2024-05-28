@@ -1,11 +1,9 @@
 package ca.ts.strategydemo.instrument.calculate;
 
-import ca.ts.strategydemo.instrument.calculate.impl.CalculateStrategy1;
-import ca.ts.strategydemo.instrument.calculate.impl.CalculateStrategy2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 /**
  * @author: Alex Hu
@@ -14,22 +12,23 @@ import java.util.Map;
  */
 @Component
 public class InstrumentCalculate {
-    private Map<InstrumentType, CalculateStrategy>  strategyMap = new HashMap<>();
-
     /**
-     * 构造函数,装配仪器与对应的计算策略
+     * 通过构造方法注入所有的策略类
      */
-    public InstrumentCalculate() {
-        this.strategyMap.put(InstrumentType.INSTRUMENT_1, new CalculateStrategy1());
-        this.strategyMap.put(InstrumentType.INSTRUMENT_2, new CalculateStrategy2());
-        // 其他仪器类型
+    private List<CalculateStrategy> strategyList;
+
+    @Autowired
+    public InstrumentCalculate(List<CalculateStrategy> strategyList) {
+        this.strategyList = strategyList;
     }
 
     public boolean Calculate(String parameters, InstrumentType instrumentType) {
-        CalculateStrategy strategy = strategyMap.get(instrumentType);
-        if (strategy == null) {
-            throw new IllegalArgumentException("No calculate strategy found for instrument type: " + instrumentType);
+        for (CalculateStrategy strategy : strategyList) {
+            if (strategy.support(instrumentType)) {
+                return strategy.calculate(parameters);
+            }
         }
-        return strategy.calculate(parameters);
+        return false;
+
     }
 }
