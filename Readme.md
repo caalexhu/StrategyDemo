@@ -86,3 +86,6 @@ public class InstrumentCalculateTest {
 ```
 ### 4.扩展及维护
 若有新的仪器类型，只需要实现新的策略类，并在上下文类中装配即可，不需要修改原有代码，符合开闭原则(OCP，Open Closed Principle)；若要修改某个仪器的计算逻辑，只需要修改对应的策略类即可，不需要修改其他策略类，符合单一职责原则(SRP，Single Responsibility Principle)。
+
+### 5.spring-boot 分支
+在 spring-boot 分支中，通过定义support方法实现实现自动匹配策略类，不需要在上下文类中手动装配策略类，更加灵活。
