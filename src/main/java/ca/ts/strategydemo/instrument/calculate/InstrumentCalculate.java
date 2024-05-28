@@ -23,12 +23,16 @@ public class InstrumentCalculate {
     }
 
     public boolean Calculate(String parameters, InstrumentType instrumentType) {
-        for (CalculateStrategy strategy : strategyList) {
+        // 如果策略列表为空，直接返回false
+        if (this.strategyList == null || this.strategyList.isEmpty()) {
+            return false;
+        }
+        // 遍历策略列表，找到支持当前类型的策略类，调用其calculate方法
+        for (CalculateStrategy strategy : this.strategyList) {
             if (strategy.support(instrumentType)) {
                 return strategy.calculate(parameters);
             }
         }
         return false;
-
     }
 }
